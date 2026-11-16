@@ -1,0 +1,132 @@
+/* =========================================
+   1. GLOBAL STYLES & RESET (ตั้งค่าพื้นฐาน)
+   Banner Comment / Block Banner
+   เน้นเรื่อง Code Organization (การจัดระเบียบโค้ด) มักพบเห็นได้บ่อยที่สุดในไฟล์ CSS/SCSS 
+   หรือไฟล์การตั้งค่า (Config) ที่มีความยาวมากๆ 
+   เพื่อช่วยให้นักพัฒนาคนอื่นในทีม (หรือแม้แต่ตัวเราเองในอนาคต) สามารถสแกนหาหมวดหมู่ของโค้ดด้วยสายตาได้รวดเร็วขึ้น
+   ========================================= */
+/* นำเข้าตัวปกติ (ครอบคลุมทุกน้ำหนักตั้งแต่ Light ถึง Black) */
+@font-face {
+  font-family: "Figtree";
+  src: url("Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900; /* ระบุช่วงของน้ำหนักฟอนต์ที่ไฟล์นี้รองรับ */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* นำเข้าตัวเอียง (ครอบคลุมทุกน้ำหนัก) */
+@font-face {
+  font-family: "Figtree";
+  src: url("Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+  font-weight: 400; /* แสดงผลเป็นตัว Regular ปกติ */
+  font-size: clamp(14px, 3vw, 16px);
+  min-height: 100vh;
+  background-color: #f4d04e;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+header {
+  /* background-color: red; */
+}
+
+main {
+  /* background-color: orange; */
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+aside {
+  /* background-color: blue; */
+}
+
+footer {
+  /* background-color: greenyellow; */
+}
+
+img,
+picture,
+svg,
+video {
+  display: block; /* ลบช่องว่างปริศนาใต้รูปภาพ (เปลี่ยนจาก inline เป็น block) */
+  max-width: 100%; /* ป้องกันไม่ให้รูปภาพมีขนาดใหญ่จนล้นคอนเทนเนอร์ */
+  height: auto; /* รักษาสัดส่วนของรูปภาพไม่ให้ผิดเพี้ยน */
+}
+/* =========================================
+   CARD
+   ========================================= */
+
+.card {
+  background-color: #ffffff;
+
+  width: clamp(320px, 100%, 384px);
+  height: 524px;
+
+  border: solid black 3px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px 0px #000000;
+  padding: 24px 24px;
+  place-self: center;
+
+  display: grid;
+  grid-template-rows: 200px 1fr 32px;
+  gap: 24px;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card__tag {
+  width: fit-content; /* เติมบรรทัดนี้ */
+  display: block;
+  background-color: #f4d04e;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  font-weight: 900; /* แสดงผลเป็นตัว ExtraBold */
+}
+
+.card__date {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card_title {
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 900;
+}
+
+.card__description {
+  font-size: clamp(14px, 4vw, 16px);
+  color: #6b6b6b;
+}
+
+.card__author {
+  display: flex; /* เปลี่ยนจาก Block ธรรมดาให้เป็น Flexbox (เรียงแนวนอนอัตโนมัติ) */
+  align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง (บรรทัดเดียวกันเป๊ะ) */
+  gap: 12px; /* เว้นระยะห่างระหว่างรูปกับชื่อ (ปรับตัวเลขได้ตามต้องการ) */
+}
+
+.image_author {
+  width: 32px;
+  height: 32px;
+}
+
+.card__author-name {
+  font-weight: 900;
+}

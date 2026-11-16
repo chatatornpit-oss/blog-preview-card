@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <aside></aside>
+      <article class="card">
+        <img
+          class="card__image"
+          src="./assets/images/illustration-article.svg"
+          alt="illustration-article"
+        />
+        <div class="card__content">
+          <!-- เป็นป้ายข้อความสั้นๆ ใช้ span ได้ (หรือทำเป็นลิงก์ <a> ถ้าคลิกได้) -->
+          <span class="card__tag">Learning</span>
+
+          <!-- วันที่ ถ้าให้ดีสุดใช้ <time> หรือจะใช้ <p> / <span> ก็ไม่ผิด -->
+          <time class="card__date">Published 21 Dec 2023</time>
+
+          <!-- เป็นหัวข้อ แต่ไม่ใช่หัวข้อหลักสุดของหน้าเว็บ เลยใช้ h2 หรือ h3 -->
+          <h3 class="card__title">HTML & CSS foundations</h3>
+
+          <!-- เป็นประโยคเนื้อหาความยาวระดับหนึ่ง ใช้ p -->
+          <p class="card__description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <div class="card__author">
+          <img
+            class="image_author"
+            src="./assets/images/image-avatar.webp"
+            alt="image-avatar"
+          />
+          <span class="card__author-name">Greg Hooper</span>
+        </div>
+      </article>
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </body>
+</html>
