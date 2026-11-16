@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Figtree";
   src: url("Figtree-VariableFont_wght.ttf") format("truetype");
-  font-weight: 300 900; /* ระบุช่วงของน้ำหนักฟอนต์ที่ไฟล์นี้รองรับ */
+  /* font-weight: 300 900; */
   font-style: normal;
   font-display: swap;
 }
@@ -18,7 +18,7 @@
 @font-face {
   font-family: "Figtree";
   src: url("Figtree-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 300 900;
+  /* font-weight: 300 900; */
   font-style: italic;
   font-display: swap;
 }
@@ -28,11 +28,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Figtree", sans-serif;
   line-height: 1.5;
   font-weight: 400; /* แสดงผลเป็นตัว Regular ปกติ */
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: clamp(12px, 3vw, 14px);
   min-height: 100vh;
   background-color: #f4d04e;
   display: grid;
@@ -106,9 +107,10 @@ video {
   margin-bottom: 12px;
 }
 
-.card_title {
+.card__title {
   font-size: clamp(20px, 5vw, 24px);
   font-weight: 900;
+  margin-bottom: 12px;
 }
 
 .card__description {
